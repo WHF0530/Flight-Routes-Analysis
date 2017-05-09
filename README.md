@@ -76,6 +76,7 @@ ggplot() + usamap +
           axis.title.x = element_blank(),
           axis.title.y = element_blank()
     )
+![Top 15 Popular Routes By Passengers](https://github.com/WHF0530/Flight-Routes-Analysis/blob/master/popular_routes_by_passengers.png "Top 15 Popular Routes By Passengers")
 
 
 # PART 1-2: Top 15 popular routes by freight
@@ -107,6 +108,7 @@ ggplot() + usamap +
           axis.title.x = element_blank(),
           axis.title.y = element_blank()
     )
+![Top 15 Popular Routes By Freight](https://github.com/WHF0530/Flight-Routes-Analysis/blob/master/popular_routes_by_freight.png "Top 15 Popular Routes By Freight")
 
 
 # PART 1-3: Top 15 popular routes by mails
@@ -139,6 +141,7 @@ ggplot() + usamap +
           axis.title.x = element_blank(),
           axis.title.y = element_blank()
     )
+![Top 15 Popular Routes By Mail](https://github.com/WHF0530/Flight-Routes-Analysis/blob/master/popular_routes_by_mail.png "Top 15 Popular Routes By Mail")
 ```
 
   Each of the three maps show 2016’s top 15 routes carrying the highest volume with respect to whether they are freight, mail or passenger planes. The color scale, on the right of the map, provides an easier method of comparison that allows the viewer to obtain the basic, necessary information at a quick glance. It is evident from the shade of the dark navy route from Chicago, IL to New York, NY that it is the most popular. It is also interesting to note from the scale that in one year, this particular route carries over 1,000,000 more passengers than some of the flights from FL to NY. Map 2 is similar except it with with respect to the airlines that are carrying freight. According to the key, the route from Anchorage, AK to Louisville, KY transfers around 500,000,000 pounds of freight a year which is more than double many of the other routes displayed. Among the top 15 routes, there is a large discrepancy between the top 3 routes and the remaining 12. Map 3 uses the same setup as the others except compares the volume of mail. The route from Anchorage, AK to Bethel, AK holds holds the highest capacity at around 32,000,000 pounds of mail which is approximately three times as much as routes that fly from Los Angeles, CA to Newark, NJ. This is also the only variable that has 6 out of its top 15 routes in Hawaii and Alaska.  
