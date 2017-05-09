@@ -16,7 +16,6 @@ flights <- read_csv("flights_modified.csv")
 
 ```markdown
 ## PART 1:  What were the most popular routes?
-
 routes_summary <-flights %>%
     select(PASSENGERS, FREIGHT, MAIL, ORIGIN, ORIGIN_CITY_NAME, ORIGIN_STATE_ABR, DEST, DEST_CITY_NAME, DEST_STATE_ABR) %>%
     mutate(
@@ -48,7 +47,6 @@ airports <- select(airports_with_coords, airport, lon, lat)
 
 
 # PART 1-1: Top 15 popular routes by passengers
-
 flights_dest_merged_pass <- merge(routes_by_passenger, airports, by.x="city2", by.y="airport")
 flights_route_pass <- merge(flights_dest_merged_pass, airports, by.x="city1", by.y="airport")
 write.csv(flights_route_pass, file = "flights_route_pass")
@@ -82,7 +80,6 @@ ggplot() + usamap +
 
 
 # PART 1-2: Top 15 popular routes by freight
-
 flights_dest_merged_frt <- merge(routes_by_freight, airports, by.x="city2", by.y="airport")
 flights_route_frt <- merge(flights_dest_merged_frt, airports, by.x="city1", by.y="airport")
 write.csv(flights_route_frt, file = "flights_route_frt")
@@ -98,7 +95,6 @@ write.csv(Routes_frt_complete, file = "Routes_frt_complete")
 
 
 # Plot 1-2: Popular Routes by freight
-
 usamap <- borders("state", colour="white", fill="#efede1")
 ggplot() + usamap + 
     geom_point(data=Routes_frt_complete, aes(x = lon, y = lat), col = "#970027") + 
@@ -131,7 +127,6 @@ Routes_mail_complete <- data.frame(airport=Routes_mail, Routes_mail_coords)
 write.csv(Routes_mail_complete, file = "Routes_mail_complete")
 
 # Plot 1-3: Popular Routes by mail
-
 usamap <- borders("state", colour="white", fill="#efede1")
 ggplot() + usamap + 
     geom_point(data=Routes_mail_complete, aes(x = lon, y = lat), col = "#970027") + 
